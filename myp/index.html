@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rishit | Portfolio</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init({ publicKey: "4jODxRA76g6CShNrQ" });
+    })();
+  </script>
+
+  <!-- Typed.js for typing animation -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a class="logo" onclick="scrollToSection('top')">Rishit</a>
+      <ul class="nav-links">
+  <li><a href="#about">About</a></li>
+  <li><a href="#projects">Projects</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li class="dropdown">
+    <a href="#">Resume ▾</a>
+    <ul class="dropdown-content">
+      <li><a href="Rishit_Resume.pdf" target="_blank">View Resume</a></li>
+      <li><a href="Rishit_Resume.pdf" download>Download Resume</a></li>
+    </ul>
+  </li>
+</ul>
+
+
+      <div class="toggle-container">
+        <label class="switch">
+          <input type="checkbox" id="darkToggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Top anchor target -->
+  <div id="top"></div>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Hello! I'm Rishit, <span class="typed-wrapper"><span id="typed-text"></span></span></h1>
+      <button onclick="scrollToSection('projects')">Explore Projects</button>
+      <button class="hero-btn" onclick="window.open('Rishit_Resume.pdf', '_blank')">Download Resume</button>
+    </div>
+  </section>
+
+  <section id="about" class="section about">
+  <h2>About Me</h2>
+  <p>
+    I'm a Computer Science student at NIT Warangal who enjoys turning ideas into working software. Whether it's building full-stack web apps, experimenting with machine learning models, or crafting clean user interfaces, I love working across the stack and learning as I go.
+    <br><br>
+    I've worked on real-time AI tools using Teachable Machine, developed database-backed systems with MySQL, and deployed my own portfolio using GitHub and Netlify. I'm curious, quick to learn, and always chasing the next challenge in tech.
+    <br><br>
+    When I’m not coding, you’ll find me analyzing F1 strategy, watching cricket, solving Rubik’s cubes, or bingeing a good series. It’s all a mix of code, chaos, and figuring things out one step at a time.
+  </p>
+</section>
+
+
+  <section id="projects" class="section projects">
+  <h2>Projects</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>A fully responsive personal website built with HTML, CSS, and JavaScript. Includes dark mode, typing animation, and a functional contact form using EmailJS. Deployed live via Netlify.</p>
+    </div>
+    <div class="card">
+      <h3>Real Estate Management System</h3>
+      <p>A relational database system built using MySQL and Workbench to manage properties, tenants, leases, payments, and service requests. Features normalized schema design and ER modeling.</p>
+    </div>
+    <div class="card">
+      <h3>AI/ML Classifier (Teachable Machine)</h3>
+      <p>A real-time image classification web app using TensorFlow.js and Google’s Teachable Machine. Integrates webcam input and live predictions. Deployed using GitHub Pages.</p>
+    </div>
+  </div>
+</section>
+
+
+  <section id="contact" class="section contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="formMessage"></p>
+  </section>
+
+  <button id="goTopBtn" title="Go to top">⬆</button>
+
+  <footer>
+  <p>© 2025 Rishit Dangeti</p>
+  <div class="footer-links">
+    <a href="https://github.com/dvrishit" target="_blank">GitHub</a> |
+    <a href="https://www.linkedin.com/in/rishitdangeti/
+" target="_blank">LinkedIn</a>
+  </div>
+</footer>
+
+
+  <!-- Your JS last -->
+  <script src="script.js"></script>
+</body>
+</html>
