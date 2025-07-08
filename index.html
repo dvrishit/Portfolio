@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rishit | Portfolio</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init({ publicKey: "4jODxRA76g6CShNrQ" });
+    })();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a class="logo" onclick="scrollToSection('top')">Rishit</a>
+      <ul class="nav-links">
+  <li><a href="#about">About</a></li>
+  <li><a href="#projects">Projects</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li class="dropdown">
+    <a href="#">Resume ▾</a>
+    <ul class="dropdown-content">
+      <li><a href="Rishit_Resume.pdf" target="_blank">View Resume</a></li>
+      <li><a href="Rishit_Resume.pdf" download>Download Resume</a></li>
+    </ul>
+  </li>
+</ul>
+
+
+      <div class="toggle-container">
+        <label class="switch">
+          <input type="checkbox" id="darkToggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </nav>
+  </header>
+
+  <div id="top"></div>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Hello! I'm Rishit, <span class="typed-wrapper"><span id="typed-text"></span></span></h1>
+      <button onclick="scrollToSection('projects')">Explore Projects</button>
+      <button class="hero-btn" onclick="window.open('Rishit_Resume.pdf', '_blank')">Download Resume</button>
+    </div>
+  </section>
+
+  <section id="about" class="section about">
+  <h2>About Me</h2>
+  <p>
+    I'm a Computer Science student at NIT Warangal who enjoys turning ideas into working software. Whether it's building full-stack web apps, experimenting with machine learning models, or crafting clean user interfaces, I love working across the stack and learning as I go.
+    <br><br>
+    I've worked on real-time AI tools using Teachable Machine, developed database-backed systems with MySQL, and deployed my own portfolio using GitHub and Netlify. I'm curious, quick to learn, and always chasing the next challenge in tech.
+    <br><br>
+    When I’m not coding, you’ll find me analyzing F1 strategy, watching cricket, solving Rubik’s cubes, or bingeing a good series. It’s all a mix of code, chaos, and figuring things out one step at a time.
+  </p>
+</section>
+
+
+  <section id="projects" class="section projects">
+  <h2>Projects</h2>
+  <div class="cards">
+
+  <div class="card">
+  <h3>DineEase: Restaurant Web Application</h3>
+
+  <p>
+    A full-stack restaurant site built with React.js, featuring modular components, routing with React Router,
+    and external JSON-based API integration. Styled using Flexbox and custom CSS, and optimized with Vite.
+  </p>
+
+  <div class="project-buttons">
+    <a href="https://github.com/dvrishit/DineEase" target="_blank" class="project-btn">GitHub Repo</a>
+    <a href="images.pdf" download class="project-btn secondary-btn">Images</a>
+  </div>
+</div>
+
+
+
+
+  <div class="card">
+    <h3>AI/ML Classifier</h3>
+    <p>
+      A real-time webcam-based image classification app using Google’s Teachable Machine and TensorFlow.js.
+      Integrated dynamic frontend in HTML, CSS, and JavaScript with live UI feedback for predictions.
+    </p>
+    <a href="https://github.com/dvrishit/AI-ML-Classifier" target="_blank" class="project-btn">GitHub Repo</a>
+  </div>
+
+  <div class="card">
+    <h3>Real Estate Management System</h3>
+    <p>
+      A MySQL-backed database solution for managing properties, leases, tenants, payments, and maintenance.
+      Includes ER modeling in MySQL Workbench and simulation of real-world workflows like rent tracking.
+    </p>
+    <a href="dbmsproject.pdf" download class="project-btn">Download Project</a>
+  </div>
+
+  <div class="card">
+    <h3>Personal Portfolio Website</h3>
+    <p>
+      A responsive HTML/CSS/JavaScript website with typing animations, dark mode, and EmailJS contact form.
+      Deployed on Netlify for fast global access. Showcases skills, projects, and social links.
+    </p>
+  </div>
+
+</div>
+
+</section>
+
+  <section id="skills" class="section skills">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div><strong>Languages:</strong> C++, HTML, CSS, JavaScript</div>
+    <div><strong>Frameworks:</strong> React.js, Node.js, Express.js, TensorFlow.js</div>
+    <div><strong>Databases:</strong> MySQL, MySQL Workbench</div>
+    <div><strong>Tools:</strong> Git, GitHub, VS Code, Jupyter Notebook, Vite</div>
+    <div><strong>Concepts:</strong> DSA, OOP, DBMS</div>
+    <div><strong>Soft Skills:</strong> Problem Solving, Teamwork, Adaptability</div>
+  </div>
+</section>
+
+<section id="achievements" class="section achievements">
+  <h2>Achievements</h2>
+  <ul>
+    <li>JEE Mains 2023: AIR 2749</li>
+    <li>JEE Advanced 2023: AIR 10798</li>
+    <li>Scored 98.1% in Intermediate (Telangana Board)</li>
+    <li>500+ problems solved on LeetCode</li>
+  </ul>
+</section>
+
+
+
+  <section id="contact" class="section contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="formMessage"></p>
+  </section>
+
+  <button id="goTopBtn" title="Go to top">⬆</button>
+
+  <footer>
+  <p>© 2025 Rishit Dangeti</p>
+  <div class="footer-links">
+    <a href="https://github.com/dvrishit" target="_blank">GitHub</a> |
+    <a href="https://www.linkedin.com/in/rishitdangeti/
+" target="_blank">LinkedIn</a>
+  </div>
+</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
