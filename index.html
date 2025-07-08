@@ -20,28 +20,31 @@
 <body>
   <header>
     <nav>
-      <a class="logo" onclick="scrollToSection('top')">Rishit</a>
-      <ul class="nav-links">
-  <li><a href="#about">About</a></li>
-  <li><a href="#projects">Projects</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li class="dropdown">
-    <a href="#">Resume ▾</a>
-    <ul class="dropdown-content">
-      <li><a href="Rishit_Resume.pdf" target="_blank">View Resume</a></li>
-      <li><a href="Rishit_Resume.pdf" download>Download Resume</a></li>
-    </ul>
-  </li>
-</ul>
+  <a class="logo" onclick="scrollToSection('top')">Rishit</a>
 
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li class="dropdown">
+      <a href="#">Resume ▾</a>
+      <ul class="dropdown-content">
+        <li><a href="Rishit_Resume.pdf" target="_blank">View Resume</a></li>
+        <li><a href="Rishit_Resume.pdf" download>Download Resume</a></li>
+      </ul>
+    </li>
+  </ul>
 
-      <div class="toggle-container">
-        <label class="switch">
-          <input type="checkbox" id="darkToggle">
-          <span class="slider"></span>
-        </label>
-      </div>
-    </nav>
+<div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <div class="toggle-container">
+    <label class="switch">
+      <input type="checkbox" id="darkToggle" />
+      <span class="slider"></span>
+    </label>
+  </div>
+</nav>
+
   </header>
 
   <div id="top"></div>
